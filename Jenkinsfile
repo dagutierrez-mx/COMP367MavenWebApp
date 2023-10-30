@@ -4,7 +4,8 @@ pipeline{
     stage("Bulid"){
       steps{
           echo 'building the Maven Webapp project for COMP367'
-    }
+		}
+	}
      stage("test"){
        steps{
           echo 'testing the project '
