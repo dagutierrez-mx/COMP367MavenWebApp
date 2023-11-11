@@ -28,5 +28,6 @@ pipeline{
                     sh 'docker push dg-devops-lab03'
                 }
             }
-  }
+  		}
+	}
 }
