@@ -13,7 +13,7 @@ pipeline{
         stage('Build docker image') {
             steps{
                 script{
-                    sh 'docker build -t dg-devops-lab03 .'
+                    sh 'docker build -t MavenWebApp .'
                 }
             }
         }
@@ -25,7 +25,7 @@ pipeline{
                     sh 'docker login --username ${dockerhubusername} --password ${dockerhubpassword}'
                     }
 
-                    sh 'docker push dg-devops-lab03'
+                    sh 'docker push MavenWebApp'
                 }
             }
   		}
