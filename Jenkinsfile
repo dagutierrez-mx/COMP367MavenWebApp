@@ -25,7 +25,7 @@ pipeline{
                     sh 'docker login --username ${USERNAME} --password ${PASSWORD}'
                     }
 
-                    sh 'docker push mavenwebapp'
+                    sh 'docker push dagutiercente/mavenwebapp'
                 }
             }
   		}
