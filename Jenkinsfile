@@ -21,8 +21,8 @@ pipeline{
             steps{
                 script{
 
-                    withCredentials([string(credentialsId: 'dockerusername', variable: 'dockerhubusername'), string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpassword')]) {
-                    sh 'docker login --username ${dockerhubusername} --password ${dockerhubpassword}'
+                    withCredentials([string(credentialsId: 'dockehub_id', variable: 'dockerhub_idUsername'), string(credentialsId: 'dockerhub_id', variable: 'dockerhub_idPassword')]) {
+                    sh 'docker login --username ${dockerhub_idUsername} --password ${dockerhub_idPassword}'
                     }
 
                     sh 'docker push mavenwebapp'
